@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>LocalStorageModule</id>
+    <version>1.0.0</version>
+    <authors>XDI02</authors>
+    <owners>XDI02</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags></tags>
+    <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="sqlite-net-pcl" version="1.4.118"/>
+      </group>
+      <group targetFramework="monoandroid70">
+        <dependency id="sqlite-net-pcl" version="1.4.118"/>
+      </group>
+      <group targetFramework="Xamarin.iOS10">
+        <dependency id="sqlite-net-pcl" version="1.4.118"/>
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- PCL -->
+    <file src="LocalDatabaseService\bin\Release\LocalDatabaseService*" target="lib\netstandard2.0" />
+
+    <!-- iOS -->
+    <file src="LocalDatabaseService.iOS\bin\Release\LocalDatabaseService*" target="lib\Xamarin.iOS10" />
+
+    <!-- Droid -->
+    <file src="LocalDatabaseService.Droid\bin\Release\LocalDatabaseService*" target="lib\MonoAndroid70" />
+  </files>
+</package>
